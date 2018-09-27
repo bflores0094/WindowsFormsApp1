@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timeLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.plusLeftLabel = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             this.startButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Title = new System.Windows.Forms.Label();
+            this.currDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
@@ -304,11 +306,21 @@
             this.Title.TabIndex = 22;
             this.Title.Text = "Brandon Flores\' Timed Quiz";
             // 
+            // currDate
+            // 
+            this.currDate.AutoSize = true;
+            this.currDate.Location = new System.Drawing.Point(0, 0);
+            this.currDate.Name = "currDate";
+            this.currDate.Size = new System.Drawing.Size(35, 13);
+            this.currDate.TabIndex = 23;
+            this.currDate.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.currDate);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.quotient);
@@ -334,6 +346,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.timeLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -374,6 +387,7 @@
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label Title;
+        private System.Windows.Forms.Label currDate;
     }
 }
 

@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
         int multend2;
         int div1;
         int div2;
+        DateTime today;
 
         int timeLeft;
         
@@ -123,7 +124,8 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            today = DateTime.Now;
+            currDate.Text =today.ToString("dd MMMM yyyy");
         }
 
         private void answer_Enter(object sender, EventArgs e)
