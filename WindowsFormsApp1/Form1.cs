@@ -86,13 +86,7 @@ namespace WindowsFormsApp1
                 timeLabel.Text = timeLeft + " seconds";
                 if (timeLeft < 6)
                 {
-                    for (int i = 5; i > 0; i--)
-                    {
-                        if (timeLabel.BackColor == Color.White)
-                            timeLabel.BackColor = Color.Red;
-                        else
-                            timeLabel.BackColor = Color.White;
-                    }
+                    changeColor();
                 }
             
 
@@ -138,6 +132,17 @@ namespace WindowsFormsApp1
                 answerBox.Select(0, lengthOfAnswer);
             }
         }
+
+        private async Task changeColor()
+        {
+            await Task.Delay(TimeSpan.FromMilliseconds(500));
+            timeLabel.BackColor = Color.Red;
+            await Task.Delay(TimeSpan.FromMilliseconds(500));
+            timeLabel.BackColor = Color.White;
+           
+
+        }
+
 
 
     }
